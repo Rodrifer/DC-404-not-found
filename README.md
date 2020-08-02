@@ -1,1 +1,1 @@
-# 404-not-found
+404 Not Found challenge solution for https://devchallenges.io
