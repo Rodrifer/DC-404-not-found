@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --h1-font-size: 2rem;
+    --body-font-size: .9em;
+    --small-font-size: .75em;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: var(--body-font-size);
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main__title {
+    font-size: 1rem;
+    margin-bottom: 9rem;
+}
+
+.section {
+    display: grid;
+}
+
+@media screen and (min-width: 960px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.section__title {
+    font-size: 2.5rem;
+}
+
+.section__img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section__description {
+    width: 50%;
+}
