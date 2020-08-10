@@ -1,22 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap");
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Fonts */
 :root {
-    --h1-font-size: 2rem;
-    --body-font-size: .9em;
-    --small-font-size: .75em;
+    --fs-h1: 1rem;
+    --fs-h3: 2.5rem;
+    --fs-body: 1rem;
+    --fs-footer: .75rem;
+    --fs-small: .55rem;
+
+    --ff-space-mono: 'Space Mono', monospace;
+    --ff-monserrat: 'Montserrat', sans-serif;
+    --ff-inconsolata: 'Inconsolata', monospace;
+
 }
 
-body {
-    margin: 0;
-    font-family: 'Space Mono', monospace;
-    font-size: var(--body-font-size);
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 2rem;
+/* Colors */
+:root {
+    --gray-1: #333333;
 }
 
 a {
@@ -35,23 +43,49 @@ h4 {
     margin-bottom: 0;
 }
 
+body {
+    margin: 0;
+    font-family: var(--ff-space-mono);
+    font-weight: 400;
+    font-size: var(--fs-body);
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 2rem;
+    color: var(--gray-1);
+    height: 100vh;
+}
+
+/* Page */
+
+.main {
+    position: relative;
+    height: 100%;
+}
+
 .main__title {
-    font-size: 1rem;
+    font-family: (var(--ff-inconsolata));
+    font-size: var(--fs-h1);
     margin-bottom: 9rem;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
 }
 
 .section {
     display: grid;
 }
 
-@media screen and (min-width: 960px) {
-    .section {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.section__button {
+    background-color: var(--gray-1);
+    font-size: var(--fs-small);
+    color: #ffffff;
+    display: inline-block;
+    border: 1px solid;
+    padding: 1.5em 3em;
 }
 
 .section__title {
-    font-size: 2.5rem;
+    font-size: var(--fs-h3);
+    font-weight: 700;
 }
 
 .section__img {
@@ -62,4 +96,20 @@ h4 {
 
 .section__description {
     width: 50%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--ff-monserrat);
+    font-size: var(--fs-footer);
+}
+
+@media screen and (min-width: 960px) {
+    .section {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
